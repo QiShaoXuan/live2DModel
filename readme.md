@@ -12,4 +12,4 @@
 
 https://github.com/xiazeyu/live2d-widget.js
 
-不要问我为什么多次一举，因为作者的 cdn 貌似都挂了
+不要问我为什么多此一举，因为作者的 cdn 貌似都挂了
