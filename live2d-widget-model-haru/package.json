@@ -1,0 +1,43 @@
+{
+  "_from": "live2d-widget-model-haru",
+  "_id": "live2d-widget-model-haru@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha1-a1Gt27SRLfSqrqrE2mTx3wTujx0=",
+  "_location": "/live2d-widget-model-haru",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "live2d-widget-model-haru",
+    "name": "live2d-widget-model-haru",
+    "escapedName": "live2d-widget-model-haru",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/live2d-widget-model-haru/download/live2d-widget-model-haru-1.0.5.tgz",
+  "_shasum": "6b51addbb4912df4aaaeaac4da64f1df04ee8f1d",
+  "_spec": "live2d-widget-model-haru",
+  "_where": "/Users/qi/mygit/liveModel",
+  "bugs": {
+    "url": "https://github.com/xiazeyu/live2d-widget-models/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "haru live2d model for live2d-widget.js",
+  "homepage": "https://github.com/xiazeyu/live2d-widget-models#readme",
+  "license": "GPL-2.0",
+  "name": "live2d-widget-model-haru",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiazeyu/live2d-widget-models.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.5"
+}

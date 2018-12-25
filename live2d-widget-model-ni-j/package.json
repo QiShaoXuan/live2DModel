@@ -1,0 +1,43 @@
+{
+  "_from": "live2d-widget-model-ni-j",
+  "_id": "live2d-widget-model-ni-j@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha1-zXO9CgCWadcapFAJ3rj8XwuOO2c=",
+  "_location": "/live2d-widget-model-ni-j",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "live2d-widget-model-ni-j",
+    "name": "live2d-widget-model-ni-j",
+    "escapedName": "live2d-widget-model-ni-j",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/live2d-widget-model-ni-j/download/live2d-widget-model-ni-j-1.0.5.tgz",
+  "_shasum": "cd73bd0a009669d71aa45009deb8fc5f0b8e3b67",
+  "_spec": "live2d-widget-model-ni-j",
+  "_where": "/Users/qi/mygit/liveModel",
+  "bugs": {
+    "url": "https://github.com/xiazeyu/live2d-widget-models/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "ni-j live2d model for live2d-widget.js",
+  "homepage": "https://github.com/xiazeyu/live2d-widget-models#readme",
+  "license": "GPL-2.0",
+  "name": "live2d-widget-model-ni-j",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiazeyu/live2d-widget-models.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.5"
+}

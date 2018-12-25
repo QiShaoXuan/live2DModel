@@ -1,0 +1,43 @@
+{
+  "_from": "live2d-widget-model-izumi",
+  "_id": "live2d-widget-model-izumi@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha1-pvaxK9w5S/4NxX5DapwwPcvmqZc=",
+  "_location": "/live2d-widget-model-izumi",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "live2d-widget-model-izumi",
+    "name": "live2d-widget-model-izumi",
+    "escapedName": "live2d-widget-model-izumi",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/live2d-widget-model-izumi/download/live2d-widget-model-izumi-1.0.5.tgz",
+  "_shasum": "a6f6b12bdc394bfe0dc57e436a9c303dcbe6a997",
+  "_spec": "live2d-widget-model-izumi",
+  "_where": "/Users/qi/mygit/liveModel",
+  "bugs": {
+    "url": "https://github.com/xiazeyu/live2d-widget-models/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "izumi live2d model for live2d-widget.js",
+  "homepage": "https://github.com/xiazeyu/live2d-widget-models#readme",
+  "license": "GPL-2.0",
+  "name": "live2d-widget-model-izumi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiazeyu/live2d-widget-models.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.5"
+}

@@ -1,0 +1,43 @@
+{
+  "_from": "live2d-widget-model-unitychan",
+  "_id": "live2d-widget-model-unitychan@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha1-/fCtMD6soE1C3sBcRagqJBhLeVM=",
+  "_location": "/live2d-widget-model-unitychan",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "live2d-widget-model-unitychan",
+    "name": "live2d-widget-model-unitychan",
+    "escapedName": "live2d-widget-model-unitychan",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/live2d-widget-model-unitychan/download/live2d-widget-model-unitychan-1.0.5.tgz",
+  "_shasum": "fdf0ad303eaca04d42dec05c45a82a24184b7953",
+  "_spec": "live2d-widget-model-unitychan",
+  "_where": "/Users/qi/mygit/liveModel",
+  "bugs": {
+    "url": "https://github.com/xiazeyu/live2d-widget-models/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "unitychan live2d model for live2d-widget.js",
+  "homepage": "https://github.com/xiazeyu/live2d-widget-models#readme",
+  "license": "GPL-2.0",
+  "name": "live2d-widget-model-unitychan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiazeyu/live2d-widget-models.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.5"
+}

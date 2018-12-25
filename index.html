@@ -3,43 +3,201 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-
+<style>
+  label {
+    display: block;
+    cursor: pointer;
+  }
+</style>
 <body>
+<div class="radio-container">
 
+</div>
 </body>
 <script src="./L2Dwidget.min.js"></script>
 <script>
-  let ww = document.body.clientWidth
-  let wh = document.body.clientHeight
-  console.log(ww)
-  width = 80 / 1424 * ww
-  height = width / .8
-  L2Dwidget.init({
-    model: {
-      jsonPath: './live2d-widget-model-hijiki/assets/hijiki.model.json',
+  const radioContainer = document.querySelector('.radio-container')
+  const model = ['live2d-widget-model-chitose',
+    'live2d-widget-model-epsilon2_1',
+    'live2d-widget-model-gf',
+    'live2d-widget-model-haru-01',
+    'live2d-widget-model-haru-02',
+    'live2d-widget-model-haruto',
+    'live2d-widget-model-hibiki',
+    'live2d-widget-model-hijiki',
+    'live2d-widget-model-izumi',
+    'live2d-widget-model-koharu',
+    'live2d-widget-model-miku',
+    'live2d-widget-model-ni-j',
+    'live2d-widget-model-nico',
+    'live2d-widget-model-nietzsche',
+    'live2d-widget-model-nipsilon',
+    'live2d-widget-model-nito',
+    'live2d-widget-model-shizuku',
+    'live2d-widget-model-tororo',
+    'live2d-widget-model-tsumiki',
+    'live2d-widget-model-unitychan',
+    'live2d-widget-model-wanko',
+    'live2d-widget-model-z16',
+  ]
+  const modelData = [
+    {
+      name: 'live2d-widget-model-z16',
+      dir: './live2d-widget-model-z16/assets/z16.model.json',
+      width: 150,
+      height: 300
     },
-    display: {
-      superSample: 2,
-      width: 80 / 1424 * document.body.clientWidth,
-      height: 80 / 1424 * document.body.clientWidth / .8,
-      position: 'right',
-      hOffset: 0,
-      vOffset: 0,
+    {
+      name: 'live2d-widget-model-wanko',
+      dir: './live2d-widget-model-wanko/assets/wanko.model.json',
+      width: 200,
+      height: 200
+    }, {
+      name: 'live2d-widget-model-unitychan',
+      dir: './live2d-widget-model-unitychan/assets/unitychan.model.json',
+      width: 200,
+      height: 200
+    }, {
+      name: 'live2d-widget-model-tsumiki',
+      dir: './live2d-widget-model-tsumiki/assets/tsumiki.model.json',
+      width: 150,
+      height: 300
+    }, {
+      name: 'live2d-widget-model-tororo',
+      dir: './live2d-widget-model-tororo/assets/tororo.model.json',
+      width: 150,
+      height: 300
+    }, {
+      name: 'live2d-widget-model-tororo',
+      dir: './live2d-widget-model-tororo/assets/tororo.model.json',
+      width: 150,
+      height: 300
+    }, {
+      name: 'live2d-widget-model-shizuku',
+      dir: './live2d-widget-model-shizuku/assets/shizuku.model.json',
+      width: 150,
+      height: 300
     },
-    mobile: {
-      show: true,
-      scale: 1,
-      motion: true,
+    {
+      name: 'live2d-widget-model-nito',
+      dir: './live2d-widget-model-nito/assets/nito.model.json',
+      width: 200,
+      height: 200
     },
-    react: {
-      opacityDefault: 0.85,
-      opacityOnHover: 0.2,
+    {
+      name: 'live2d-widget-model-nipsilon',
+      dir: './live2d-widget-model-nito/assets/nito.model.json',
+      width: 200,
+      height: 200
     },
-  });
+    {
+      name: 'live2d-widget-model-nietzsche',
+      dir: './live2d-widget-model-nietzsche/assets/nietzche.model.json',
+      width: '',
+      height: ''
+    }, {
+      name: '',
+      dir: '',
+      width: '',
+      height: ''
+    }, {
+      name: '',
+      dir: '',
+      width: '',
+      height: ''
+    }, {
+      name: '',
+      dir: '',
+      width: '',
+      height: ''
+    }, {
+      name: '',
+      dir: '',
+      width: '',
+      height: ''
+    }, {
+      name: '',
+      dir: '',
+      width: '',
+      height: ''
+    },
+  ]
+
+  const radioHtml = model.reduce(((last, current) => last + `<label for="${current}"><input type="radio" id="${current}" name="modelName" class="modelRadio" value="${current}">${current}</label>`), '')
+
+  radioContainer.innerHTML = radioHtml
+
+  const radios = document.querySelectorAll('.modelRadio')
+
+  radios.forEach((dom) => {
+    dom.addEventListener('change', function () {
+
+      let dir = ''
+
+      switch(this.value){
+        case 'live2d-widget-model-gf':
+          dir = `./${this.value}/assets/Gantzert_Felixander.model.json`
+          break
+        case 'live2d-widget-model-epsilon2_1':
+          dir =`./${this.value}/assets/Epsilon2.1.model.json`
+          break
+        case 'live2d-widget-model-haru-01':
+          dir = `./live2d-widget-model-haru/01/assets/haru01.model.json`
+          break
+        case 'live2d-widget-model-haru-02':
+          dir = `./live2d-widget-model-haru/02/assets/haru02.model.json`
+          break
+        case 'live2d-widget-model-ni-j' :
+          dir = `./${this.value}/assets/ni-j.model.json`
+          break
+        default:
+          dir = `./${this.value}/assets/${this.value.split('-').splice(2).reverse().join('.')}.json`
+      }
+
+      L2Dwidget.init(getOptions(dir))
+    })
+  })
+</script>
+<script>
+
+
+  function getOptions(dir) {
+    return {
+      model: {
+        // jsonPath: './live2d-widget-model-nietzsche/assets/nietzche.model.json',
+        // jsonPath: './live2d-widget-model-nietzsche/assets/nietzsche.model.json',
+        jsonPath: dir,
+      },
+      display: {
+        superSample: 2,
+        width: 150,
+        height: 300,
+        position: 'right',
+        hOffset: 0,
+        vOffset: 0,
+      },
+      mobile: {
+        show: true,
+        scale: 1,
+        motion: true,
+      },
+      react: {
+        opacityDefault: 0.85,
+        opacityOnHover: 0.2,
+      },
+    }
+
+  }
+
+</script>
+<script>
+  // live2d-widget-model-haru/01 (use npm install --save )
+  // live2d-widget-model-haru/02 (use npm install --save live2d-widget-model-haru)
 
 </script>
 

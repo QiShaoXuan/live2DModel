@@ -1,0 +1,43 @@
+{
+  "_from": "live2d-widget-model-epsilon2_1",
+  "_id": "live2d-widget-model-epsilon2_1@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha1-wVAaB73OuXGCHy7umDfYtZODneU=",
+  "_location": "/live2d-widget-model-epsilon2_1",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "live2d-widget-model-epsilon2_1",
+    "name": "live2d-widget-model-epsilon2_1",
+    "escapedName": "live2d-widget-model-epsilon2_1",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/live2d-widget-model-epsilon2_1/download/live2d-widget-model-epsilon2_1-1.0.5.tgz",
+  "_shasum": "c1501a07bdceb971821f2eee9837d8b593839de5",
+  "_spec": "live2d-widget-model-epsilon2_1",
+  "_where": "/Users/qi/mygit/liveModel",
+  "bugs": {
+    "url": "https://github.com/xiazeyu/live2d-widget-models/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "epsilon2_1 live2d model for live2d-widget.js",
+  "homepage": "https://github.com/xiazeyu/live2d-widget-models#readme",
+  "license": "GPL-2.0",
+  "name": "live2d-widget-model-epsilon2_1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiazeyu/live2d-widget-models.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.5"
+}

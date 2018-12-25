@@ -1,0 +1,43 @@
+{
+  "_from": "live2d-widget-model-koharu",
+  "_id": "live2d-widget-model-koharu@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha1-ZSXixJWvQLB02RwxSZ1KcXEc/Mw=",
+  "_location": "/live2d-widget-model-koharu",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "live2d-widget-model-koharu",
+    "name": "live2d-widget-model-koharu",
+    "escapedName": "live2d-widget-model-koharu",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/live2d-widget-model-koharu/download/live2d-widget-model-koharu-1.0.5.tgz",
+  "_shasum": "6525e2c495af40b074d91c31499d4a71711cfccc",
+  "_spec": "live2d-widget-model-koharu",
+  "_where": "/Users/qi/mygit/liveModel",
+  "bugs": {
+    "url": "https://github.com/xiazeyu/live2d-widget-models/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "koharu live2d model for live2d-widget.js",
+  "homepage": "https://github.com/xiazeyu/live2d-widget-models#readme",
+  "license": "GPL-2.0",
+  "name": "live2d-widget-model-koharu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiazeyu/live2d-widget-models.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.5"
+}
