@@ -11,15 +11,29 @@
 <body>
 
 </body>
-<script src="./L2Dwidget.min.js"></script>
+<script src="/L2Dwidget.min.js"></script>
 <script>
     console.log(L2Dwidget)
     L2Dwidget.init({
         model: {
             jsonPath: './live2d-widget-model-hijiki/assets/hijiki.model.json',
-            scale: 1,
-            hHeadPos: 0.5,
-            vHeadPos: 0.618,
+        },
+        display: {
+            superSample: 2,
+            width: 120,
+            height: 150,
+            position: 'right',
+            hOffset: 0,
+            vOffset: 0,
+        },
+        mobile: {
+            show: true,
+            scale: 0.5,
+            motion: true,
+        },
+        react: {
+            opacityDefault: 0.85,
+            opacityOnHover: 0.2,
         },
     });
 </script>

@@ -7,3 +7,9 @@
 也可以直接查看
 
 <a href="https://qishaoxuan.github.io/liveModel/">liveModel</a>
+
+插件来自
+
+https://github.com/xiazeyu/live2d-widget.js
+
+不要问我为什么多次一举，因为作者的 cdn 貌似都挂了
