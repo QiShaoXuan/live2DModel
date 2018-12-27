@@ -6,10 +6,21 @@
 
 也可以直接查看
 
+已将作者发布所有模型添加，用于选择
+
 <a href="https://qishaoxuan.github.io/liveModel/">liveModel</a>
 
 插件来自
 
 https://github.com/xiazeyu/live2d-widget.js
 
-不要问我为什么多此一举，因为作者的 cdn 貌似都挂了
+## 关于 live2D （github 搜索会有很多资源）
+
+- [二次元live2d看板娘效果中的web前端技术](https://www.zhangxinxu.com/wordpress/2018/05/live2d-web-webgl-js/)
+
+- https://github.com/galnetwen/Live2D
+
+- [给博客添加能动的看板娘(Live2D)-将其添加到网页上吧](https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02)
+
+- [Live2D！把可爱的看板娘捕捉到你的博客去吧](https://haremu.com/p/205)
+ 
