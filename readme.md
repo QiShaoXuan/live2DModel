@@ -1,4 +1,4 @@
-用来给一下页面提供模型文件和源码
+用来给以下页面提供模型文件和源码
 
 <a href="https://qishaoxuan.github.io/css_tricks/" target="_blank">css tricks</a>
 
