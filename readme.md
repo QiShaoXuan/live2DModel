@@ -10,7 +10,7 @@
 
 已将作者发布所有模型添加，用于选择
 
-<a href="https://qishaoxuan.github.io/liveModel/">liveModel</a>
+<a href="https://qishaoxuan.github.io/live2DModel/">liveModel</a>
 
 插件来自
 
