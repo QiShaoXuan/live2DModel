@@ -6,11 +6,14 @@
 
 <a href="https://qishaoxuan.github.io/blog/" target="_blank">blog</a>
 
-也可以直接查看
+也可以直接查看下方链接
 
-已将作者发布所有模型添加，用于选择
+已将作者发布的所有模型添加，用于选择（因为作者贴的 npm 好像都挂了）
+
+模型转换应该是有问题的，如果加载出错请刷新页面
 
 <a href="https://qishaoxuan.github.io/live2DModel/">liveModel</a>
+
 
 插件来自
 
