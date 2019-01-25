@@ -12,6 +12,8 @@
 
 模型转换应该是有问题的，如果加载出错请刷新页面
 
+建议克隆本仓库后在本地查看，线上模型加载会很慢
+
 <a href="https://qishaoxuan.github.io/live2DModel/">liveModel</a>
 
 
