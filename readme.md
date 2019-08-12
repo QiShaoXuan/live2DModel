@@ -1,15 +1,14 @@
-用来给一下页面提供模型文件和源码
+## Live2d model
 
-<a href="https://qishaoxuan.github.io/css_tricks/" target="_blank">css tricks</a>
-<a href="https://qishaoxuan.github.io/js_tricks/" target="_blank">js tricks</a>
-<a href="https://qishaoxuan.github.io/blog/" target="_blank">blog</a>
+为 <a href="https://github.com/QiShaoXuan/vuepress-plugin-cat">vuepress-plugin-cat</a> 提供模型地址
 
-也可以直接查看
+模型源自 https://github.com/xiazeyu/live2d-widget.js 作者，这里只是简单展示，具体使用可以看该项目。
+
+## Demo
 
 <a href="https://qishaoxuan.github.io/liveModel/">liveModel</a>
 
-插件来自
+## Change log
 
-https://github.com/xiazeyu/live2d-widget.js
-
-不要问我为什么多此一举，因为作者的 cdn 貌似都挂了
+2. live2d-widget.js 更改为 live2d.js 
+1. 读取模型地址传为 cdn 地址，具体位置可打开 demo 也查看

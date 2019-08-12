@@ -13,188 +13,111 @@
     display: block;
     cursor: pointer;
   }
+
+  input[type="radio"] {
+    margin-right: 15px;
+  }
+
+  #model {
+    position: fixed;
+    right: 0px;
+    bottom: 0;
+    z-index: 99999;
+    pointer-events: none;
+  }
+
+  .url-container {
+    position: fixed;
+    right: 10px;
+    top: 15px;
+  }
+
+  .radio-container{
+    width: 400px;
+  }
 </style>
 <body>
-<h3>模型加载有问提请刷新页面重新点击</h3>
 <h4>模型加载可能会慢</h4>
 <div class="radio-container"></div>
+<div class="url-container">
+  <p>模型 cdn 地址</p>
+  <p id="url"></p>
+</div>
+
+<div class="model-container">
+  <canvas
+    width="280"
+    height="500"
+    id="model"></canvas>
+</div>
 </body>
-<script src="./L2Dwidget.min.js"></script>
+<script src="./live2d.js"></script>
 <script>
   const radioContainer = document.querySelector('.radio-container')
-  const model = ['live2d-widget-model-chitose',
-    'live2d-widget-model-epsilon2_1',
-    'live2d-widget-model-gf',
-    'live2d-widget-model-haru-01',
-    'live2d-widget-model-haru-02',
-    'live2d-widget-model-haruto',
-    'live2d-widget-model-hibiki',
-    'live2d-widget-model-hijiki',
-    'live2d-widget-model-izumi',
-    'live2d-widget-model-koharu',
-    'live2d-widget-model-miku',
-    'live2d-widget-model-ni-j',
-    'live2d-widget-model-nico',
-    'live2d-widget-model-nietzsche',
-    'live2d-widget-model-nipsilon',
-    'live2d-widget-model-nito',
-    'live2d-widget-model-shizuku',
-    'live2d-widget-model-tororo',
-    'live2d-widget-model-tsumiki',
-    'live2d-widget-model-unitychan',
-    'live2d-widget-model-wanko',
-    'live2d-widget-model-z16',]
-  const modelData = [
-    {
-      name: 'live2d-widget-model-z16',
-      dir: './live2d-widget-model-z16/assets/z16.model.json',
-      width: 150,
-      height: 300
-    },
-    {
-      name: 'live2d-widget-model-wanko',
-      dir: './live2d-widget-model-wanko/assets/wanko.model.json',
-      width: 200,
-      height: 200
-    }, {
-      name: 'live2d-widget-model-unitychan',
-      dir: './live2d-widget-model-unitychan/assets/unitychan.model.json',
-      width: 200,
-      height: 200
-    }, {
-      name: 'live2d-widget-model-tsumiki',
-      dir: './live2d-widget-model-tsumiki/assets/tsumiki.model.json',
-      width: 150,
-      height: 300
-    }, {
-      name: 'live2d-widget-model-tororo',
-      dir: './live2d-widget-model-tororo/assets/tororo.model.json',
-      width: 150,
-      height: 300
-    }, {
-      name: 'live2d-widget-model-tororo',
-      dir: './live2d-widget-model-tororo/assets/tororo.model.json',
-      width: 150,
-      height: 300
-    }, {
-      name: 'live2d-widget-model-shizuku',
-      dir: './live2d-widget-model-shizuku/assets/shizuku.model.json',
-      width: 150,
-      height: 300
-    },
-    {
-      name: 'live2d-widget-model-nito',
-      dir: './live2d-widget-model-nito/assets/nito.model.json',
-      width: 200,
-      height: 200
-    },
-    {
-      name: 'live2d-widget-model-nipsilon',
-      dir: './live2d-widget-model-nito/assets/nito.model.json',
-      width: 200,
-      height: 200
-    },
-    {
-      name: 'live2d-widget-model-nietzsche',
-      dir: './live2d-widget-model-nietzsche/assets/nietzche.model.json',
-      width: '',
-      height: ''
-    }, {
-      name: '',
-      dir: '',
-      width: '',
-      height: ''
-    }, {
-      name: '',
-      dir: '',
-      width: '',
-      height: ''
-    }, {
-      name: '',
-      dir: '',
-      width: '',
-      height: ''
-    }, {
-      name: '',
-      dir: '',
-      width: '',
-      height: ''
-    }, {
-      name: '',
-      dir: '',
-      width: '',
-      height: ''
-    },
-  ]
+  const urlSpan = document.querySelector('#url')
+  const prefix = 'live2d-widget-model-'
+  const cdnPrefix = 'https://cdn.jsdelivr.net/gh/QiShaoXuan/live2DModel@1.0.0'
+  const model = ['chitose',
+    'epsilon2_1',
+    'gf',
+    'haru-01',
+    'haru-02',
+    'haruto',
+    'hibiki',
+    'hijiki',
+    'izumi',
+    'koharu',
+    'miku',
+    'ni-j',
+    'nico',
+    'nietzsche',
+    'nipsilon',
+    'nito',
+    'shizuku',
+    'tororo',
+    'tsumiki',
+    'unitychan',
+    'wanko',
+    'z16',]
 
   const radioHtml = model.reduce(((last, current) => last + `<label for="${current}"><input type="radio" id="${current}" name="modelName" class="modelRadio" value="${current}">${current}</label>`), '')
 
   radioContainer.innerHTML = radioHtml
-
   const radios = document.querySelectorAll('.modelRadio')
+
 
   radios.forEach((dom) => {
     dom.addEventListener('change', function () {
 
       let dir = ''
+      console.log(this.value)
 
-      switch(this.value){
-        case 'live2d-widget-model-gf':
-          dir = `./${this.value}/assets/Gantzert_Felixander.model.json`
+      switch (this.value) {
+        case 'gf':
+          dir = `/${prefix}${this.value}/assets/Gantzert_Felixander.model.json`
           break
-        case 'live2d-widget-model-epsilon2_1':
-          dir =`./${this.value}/assets/Epsilon2.1.model.json`
+        case 'epsilon2_1':
+          dir = `/${prefix}${this.value}/assets/Epsilon2.1.model.json`
           break
-        case 'live2d-widget-model-haru-01':
-          dir = `./live2d-widget-model-haru/01/assets/haru01.model.json`
+        case 'haru-01':
+          dir = `/live2d-widget-model-haru/01/assets/haru01.model.json`
           break
-        case 'live2d-widget-model-haru-02':
-          dir = `./live2d-widget-model-haru/02/assets/haru02.model.json`
+        case 'haru-02':
+          dir = `/live2d-widget-model-haru/02/assets/haru02.model.json`
           break
-        case 'live2d-widget-model-ni-j' :
-          dir = `./${this.value}/assets/ni-j.model.json`
+        case 'ni-j' :
+          dir = `/${prefix}${this.value}/assets/ni-j.model.json`
           break
         default:
-          dir = `./${this.value}/assets/${this.value.split('-').splice(2).reverse().join('.')}.json`
+          dir = `/${prefix}${this.value}/assets/${this.value}.model.json`
       }
 
-      L2Dwidget.init(getOptions(dir))
+      const url = cdnPrefix + dir
+      urlSpan.innerText = url
+      loadlive2d("model", url);
     })
   })
-</script>
-<script>
 
-
-  function getOptions(dir) {
-    return {
-      model: {
-        jsonPath: dir,
-      },
-      display: {
-        superSample: 2,
-        width: 150,
-        height: 300,
-        position: 'right',
-        hOffset: 0,
-        vOffset: 0,
-      },
-      mobile: {
-        show: true,
-        scale: 1,
-        motion: true,
-      },
-      react: {
-        opacityDefault: 0.85,
-        opacityOnHover: 0.2,
-      },
-    }
-
-  }
-
-</script>
-<script>
-  // live2d-widget-model-haru/01 (use npm install --save )
-  // live2d-widget-model-haru/02 (use npm install --save live2d-widget-model-haru)
 
 </script>
 
