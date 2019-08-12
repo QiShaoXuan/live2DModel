@@ -10,5 +10,6 @@
 
 ## Change log
 
-2. live2d-widget.js 更改为 live2d.js 
+2. live2d-widget.js 更改为 live2d.js （做了一些修改）
 1. 读取模型地址传为 cdn 地址，具体位置可打开 demo 也查看
+
